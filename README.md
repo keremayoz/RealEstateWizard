@@ -1,11 +1,7 @@
-# RealEstateWizard
-Java desktop application for both agencies and users to put/show/filter/search estates and communicate with each other.
-
-Real Estate Wizard® v1.0
-Cyken Co.™ 
+#Real Estate Wizard® v1.0 Cyken Co.™ 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 Program Features
-****************
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 Real Estate Wizard is basicly a estate sharing program where every user could share and see
 estates. It allows people to communicate with estate owners, examine the present ads and 
 filtering in a detailed way
@@ -28,22 +24,22 @@ See the locations of estates via Google Maps!
 Sort and filter estates however you want!
 
 And many others... 
--------------------------------------------------------------------------------------------------------------------------------------------------------
-To Run the Program
 ******************
+To Run the Program
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 Just run the RealEstate.jar file to run the program
 Also just for the version v1.0, you need to setup the xampp to run the program to use database
--------------------------------------------------------------------------------------------------------------------------------------------------------
+******************
 Minimum System Requirements
-*******************
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 2.0 Ghz Processor
 512 MB RAM 
 256 MB V-RAM
 50 MB Storage Space
 10 Mbps Internet Connection
--------------------------------------------------------------------------------------------------------------------------------------------------------
+*******************
 Technique Information
-*********************
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 We seperate the program into 3 parts:
 1-Database
 2-GUI(View)
@@ -72,9 +68,9 @@ at the same time
 -Sale: sale component
 -LongTermLoan: longtermloan component
 -ShortTermLoan: shorttermloan component
----------------------------------------------------------------------------------------------------------------------------------------------------------
+****************
 About Us
-********
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 We are Computer Science students at Bilkent University. This is the project assingment of
 the course CS-102 Algorithms and Programming. We founded Cyken Co. in 2016. 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
