@@ -1,5 +1,6 @@
 Real Estate Wizard® v1.0 Cyken Co.™ 
-*****************************************************************************
+----------
+
 Program Features
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 Real Estate Wizard is basicly a estate sharing program where every user could share and see
