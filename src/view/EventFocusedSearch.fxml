@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EventFocusedSearchController">
+    <children>
+      <fx:include source="Template.fxml" />
+      <VBox alignment="CENTER" layoutX="18.0" layoutY="74.0" prefHeight="200.0" prefWidth="352.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Label text="Choose event that you are planning, let wizard do place selection for you!">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Button fx:id="barbequeButton" mnemonicParsing="false" onAction="#barbequeClicked" text="Barbeque">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="birthdayButton" layoutX="338.0" layoutY="45.0" mnemonicParsing="false" onAction="#birthdayClicked" text="Birthday">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="businessButton" layoutX="380.0" layoutY="45.0" mnemonicParsing="false" onAction="#businessClicked" text="Business">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="partyButton" layoutX="464.0" layoutY="45.0" mnemonicParsing="false" onAction="#partyClicked" text="Party">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="weddingButton" layoutX="548.0" layoutY="45.0" mnemonicParsing="false" onAction="#weddingClicked" text="Wedding">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <ScrollPane prefHeight="407.0" prefWidth="770.0">
+               <content>
+                  <GridPane fx:id="listPane" alignment="CENTER" hgap="10.0" vgap="10.0">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></GridPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+
+    </children>
+</AnchorPane>

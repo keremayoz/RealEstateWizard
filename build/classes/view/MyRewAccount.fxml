@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MyRewAccountController">
+   <children>
+	  <fx:include source="Template.fxml" />
+      <VBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="My REW Account">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <TabPane prefHeight="463.0" prefWidth="749.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="My Real Estate Ads">
+                     <content>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <fx:include source="MyRealEstateAds.fxml" />
+                           </children>
+                        </StackPane>
+                     </content>
+                </Tab>
+                <Tab text="Message Inbox">
+                     <content>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <fx:include source="Message.fxml" />
+                           </children>
+                        </StackPane>
+                     </content></Tab>
+                  <Tab text="Favourites">
+                     <content>
+                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                           <children>
+                              <fx:include source="Favourites.fxml" />
+                           </children>
+                        </StackPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Edit Account Details">
+                     <content>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="220.0" />
+                            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="545.0" minWidth="10.0" prefWidth="520.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text layoutX="358.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number" GridPane.rowIndex="4" />
+                              <Text layoutX="358.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password" GridPane.rowIndex="3" />
+                              <Text layoutX="358.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" GridPane.rowIndex="2" />
+                              <Text layoutX="358.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                              <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save" GridPane.rowIndex="5" />
+                              <TextField fx:id="nameField" prefHeight="25.0" prefWidth="314.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="200.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="surnameField" layoutX="240.0" layoutY="21.0" prefHeight="25.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="200.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="phoneField" layoutX="230.0" layoutY="254.0" prefHeight="25.0" prefWidth="314.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="200.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="200.0" />
+                                 </GridPane.margin>
+                              </PasswordField>
+                              <PasswordField fx:id="confirmPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" right="200.0" />
+                                 </GridPane.margin>
+                              </PasswordField>
+                              <Text fx:id="warningMessage" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Log Out">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button alignment="CENTER" layoutX="320.0" layoutY="187.0" mnemonicParsing="false" onAction="#logOutButtonClicked" text="Log Out">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="308.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure?" wrappingWidth="124.75782632827759">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

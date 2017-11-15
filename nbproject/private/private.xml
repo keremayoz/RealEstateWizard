@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/controller/AfterSearchController.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>203</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/controller/MyRealEstateAdsController.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>37</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/DatabaseMessage.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Tester.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/SignUpController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/DatabaseConnector.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/User.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/LongTermLoan.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Conversation.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/FavouritesController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Sale.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/TemplateController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/ShortTermLoan.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/House.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Component.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/PutAdController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/OpeningController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/MyRealEstateAdsController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/EventFocusedSearchController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/LoginController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/AfterSearchController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/MessageController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/view/AfterSearch.fxml</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Message.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/model/Main.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Wizard.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Land.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/AdPage.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/Office.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/controller/MyRewAccountController.java</file>
+            <file>file:/E:/AllAboutJava/projects/REW/REW/src/realestatewizard/RealEstate.java</file>
+        </group>
+    </open-files>
+</project-private>

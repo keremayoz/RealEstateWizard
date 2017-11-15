@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PutAdController">
+   <children>
+      <fx:include source="Template.fxml" />
+      <SplitPane dividerPositions="0.3, 0.6" layoutX="300.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+         <items>
+            <VBox>
+               <children>
+                  <TitledPane text="Choose a category">
+                     <content>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="houseButton" mnemonicParsing="false" text="House" />
+                              <RadioButton fx:id="saleButton" mnemonicParsing="false" text="Sale" GridPane.columnIndex="1" />
+                              <RadioButton fx:id="officeButton" mnemonicParsing="false" text="Office" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="longTermButton" mnemonicParsing="false" text="Long Term Loan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="landButton" mnemonicParsing="false" text="Land" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="shortTermButton" mnemonicParsing="false" text="Short Term Loan" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Button mnemonicParsing="false" onAction="#applyButtonClicked" text="Apply" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane text="Add Details">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <TextField fx:id="titleField" promptText="Title" />
+                              <TextField fx:id="cityField" layoutX="20.0" layoutY="45.0" promptText="City" />
+                              <TextField fx:id="townField" layoutX="20.0" layoutY="45.0" promptText="Town" />
+                              <TextField fx:id="streetField" layoutX="20.0" layoutY="45.0" promptText="Street" />
+                              <TextField fx:id="noField" layoutX="20.0" layoutY="45.0" promptText="No" />
+                              <TextField fx:id="squareMeterField" layoutX="20.0" layoutY="20.0" promptText="Square meter" />
+                              <TextArea fx:id="descriptionField" prefHeight="200.0" prefWidth="200.0" promptText="Description" />
+                              <RadioButton fx:id="exchangableButton" mnemonicParsing="false" text="Exchangable" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane expanded="false" text="Add Photos">
+                     <content>
+                        <VBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="You can upload the photos of real estate by clicking the button &quot;Choose an image&quot;" wrappingWidth="172.263671875" />
+                              <Button mnemonicParsing="false" onAction="#chooseImageClicked" text="Choose an image" />
+                              <Text fx:id="uploadDescription" fill="BLUE" strokeType="OUTSIDE" strokeWidth="0.0" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <TitledPane fx:id="housePane" disable="true" expanded="false" text="House">
+                     <content>
+                        <ScrollPane>
+                           <content>
+                              <VBox>
+                                 <children>
+                                    <TextField fx:id="ageOfBuildingField" promptText="Age of the Building" />
+                                    <TextField fx:id="floorNumberField" layoutX="20.0" layoutY="20.0" promptText="Floor Number" />
+                                    <TextField fx:id="roomNumberField" layoutX="20.0" layoutY="45.0" promptText="Room Number" />
+                                    <TextField fx:id="numberOfFloorField" layoutX="20.0" layoutY="70.0" promptText="Number of Floor" />
+                                    <ComboBox fx:id="frontBox" prefWidth="150.0" promptText="Front" />
+                                    <ComboBox fx:id="typeBox" prefWidth="150.0" promptText="Type" />
+                                    <ComboBox fx:id="heatingBox" prefWidth="150.0" promptText="Heating" />
+                                    <RadioButton fx:id="usedButton" mnemonicParsing="false" text="Used" />
+                                    <RadioButton fx:id="furnishedButton" layoutX="20.0" layoutY="170.0" mnemonicParsing="false" text="Furnished" />
+                                    <RadioButton fx:id="elevatorButton" layoutX="20.0" layoutY="262.0" mnemonicParsing="false" text="Elevator" />
+                                    <RadioButton fx:id="securityButton" layoutX="20.0" layoutY="279.0" mnemonicParsing="false" text="Security" />
+                                    <RadioButton fx:id="carParkButton" layoutX="20.0" layoutY="296.0" mnemonicParsing="false" text="Car Park" />
+                                    <RadioButton fx:id="indoorGarageButton" layoutX="20.0" layoutY="238.0" mnemonicParsing="false" text="Indoor Garage" />
+                                    <RadioButton fx:id="waterBoosterButton" layoutX="20.0" layoutY="255.0" mnemonicParsing="false" text="Water Booster" />
+                                    <RadioButton fx:id="thermalIsolationButton" layoutX="20.0" layoutY="272.0" mnemonicParsing="false" text="Thermal Isolation" />
+                                    <RadioButton fx:id="soundIsolationButton" layoutX="20.0" layoutY="289.0" mnemonicParsing="false" text="Sound Isolation" />
+                                    <RadioButton fx:id="gardenButton" layoutX="20.0" layoutY="306.0" mnemonicParsing="false" text="Garden" />
+                                    <RadioButton fx:id="paintedButton" layoutX="20.0" layoutY="323.0" mnemonicParsing="false" text="Painted" />
+                                    <RadioButton fx:id="laminatedButton" layoutX="20.0" layoutY="340.0" mnemonicParsing="false" text="Laminated" />
+                                    <RadioButton fx:id="airConditionerButton" layoutX="20.0" layoutY="357.0" mnemonicParsing="false" text="Air Conditioner" />
+                                    <RadioButton fx:id="alarmButton" layoutX="20.0" layoutY="374.0" mnemonicParsing="false" text="Alarm" />
+                                    <RadioButton fx:id="terraceButton" layoutX="20.0" layoutY="391.0" mnemonicParsing="false" text="Terrace" />
+                                    <RadioButton fx:id="windowBlindButton" layoutX="20.0" layoutY="408.0" mnemonicParsing="false" text="Window Blind" />
+                                    <RadioButton fx:id="parentBathroomButton" layoutX="20.0" layoutY="425.0" mnemonicParsing="false" text="Parent Bathroom" />
+                                    <RadioButton fx:id="smartHomeButton" layoutX="20.0" layoutY="442.0" mnemonicParsing="false" text="Smart Home" />
+                                    <RadioButton fx:id="steelDoorButton" layoutX="20.0" layoutY="459.0" mnemonicParsing="false" text="Steel Door" />
+                                    <RadioButton fx:id="waterHeaterButton" layoutX="20.0" layoutY="476.0" mnemonicParsing="false" text="Water Heater" />
+                                    <RadioButton fx:id="movieSystemButton" layoutX="20.0" layoutY="493.0" mnemonicParsing="false" text="Movie System" />
+                                    <RadioButton fx:id="tvButton" layoutX="20.0" layoutY="510.0" mnemonicParsing="false" text="TV" />
+                                    <RadioButton fx:id="ovenButton" layoutX="20.0" layoutY="527.0" mnemonicParsing="false" text="Oven" />
+                                    <RadioButton fx:id="dishWasherButton" layoutX="20.0" layoutY="544.0" mnemonicParsing="false" text="Dish Washer" />
+                                    <RadioButton fx:id="wirelesButton" layoutX="20.0" layoutY="561.0" mnemonicParsing="false" text="Wireles" />
+                                    <RadioButton fx:id="barbequeButton" layoutX="20.0" layoutY="578.0" mnemonicParsing="false" text="Barbeque" />
+                                    <RadioButton fx:id="tableButton" layoutX="20.0" layoutY="595.0" mnemonicParsing="false" text="Table" />
+                                    <RadioButton fx:id="gamingToolsButton" layoutX="20.0" layoutY="612.0" mnemonicParsing="false" text="Gaming Tools" />
+                                    <RadioButton fx:id="kitchenToolsButton" layoutX="20.0" layoutY="629.0" mnemonicParsing="false" text="Kitchen Tools" />
+                                    <RadioButton fx:id="saunaButton" layoutX="20.0" layoutY="646.0" mnemonicParsing="false" text="Sauna" />
+                                    <RadioButton fx:id="gardenToolsButton" layoutX="20.0" layoutY="663.0" mnemonicParsing="false" text="Garden Tools" />
+                                    <RadioButton fx:id="mosqueButton" layoutX="20.0" layoutY="680.0" mnemonicParsing="false" text="Mosque" />
+                                    <RadioButton fx:id="schoolButton" layoutX="20.0" layoutY="697.0" mnemonicParsing="false" text="School" />
+                                    <RadioButton fx:id="pharmacyButton" layoutX="20.0" layoutY="697.0" mnemonicParsing="false" text="Pharmacy" />
+                                    <RadioButton fx:id="supermarketButton" layoutX="20.0" layoutY="731.0" mnemonicParsing="false" text="Supermarket" />
+                                    <RadioButton fx:id="hospitalButton" layoutX="20.0" layoutY="731.0" mnemonicParsing="false" text="Hospital" />
+                                    <RadioButton fx:id="subwayButton" layoutX="20.0" layoutY="765.0" mnemonicParsing="false" text="Subway" />
+                                    <RadioButton fx:id="busStopButton" layoutX="20.0" layoutY="782.0" mnemonicParsing="false" text="Bus Stop" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="officePane" disable="true" expanded="false" layoutX="10.0" layoutY="10.0" text="Office">
+                     <content>
+                        <ScrollPane>
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField fx:id="classNumberField" promptText="Class Number" />
+                                    <TextField fx:id="ageOfTheBuildingField" layoutX="20.0" layoutY="20.0" promptText="Age of the Building" />
+                                    <TextField fx:id="floorNumberFieldOffice" layoutX="20.0" layoutY="45.0" promptText="Floor Number" />
+                                    <TextField fx:id="roomNumberFieldOffice" layoutX="20.0" layoutY="70.0" promptText="Room Number" />
+                                    <TextField fx:id="numberOfFloorFieldOffice" layoutX="20.0" layoutY="95.0" promptText="Number of Floor" />
+                                    <ComboBox fx:id="heatingBoxOffice" prefWidth="150.0" promptText="Heating" />
+                                    <ComboBox fx:id="frontBoxOffice" prefWidth="150.0" promptText="Front" />
+                                    <ComboBox fx:id="typeBoxOffice" prefWidth="150.0" promptText="Type" />
+                                    <RadioButton fx:id="usedButtonOffice" mnemonicParsing="false" text="Used" />
+                                    <RadioButton fx:id="furnishedButtonOffice" layoutX="20.0" layoutY="220.0" mnemonicParsing="false" text="Furnished" />
+                                    <RadioButton fx:id="automativeButton" layoutX="20.0" layoutY="237.0" mnemonicParsing="false" text="Automative" />
+                                    <RadioButton fx:id="cafeButton" layoutX="20.0" layoutY="254.0" mnemonicParsing="false" text="Cafe" />
+                                    <RadioButton fx:id="bakeryButton" layoutX="20.0" layoutY="271.0" mnemonicParsing="false" text="Bakery" />
+                                    <RadioButton fx:id="groceryButton" layoutX="20.0" layoutY="288.0" mnemonicParsing="false" text="Grocery" />
+                                    <RadioButton fx:id="restaurantButton" layoutX="20.0" layoutY="305.0" mnemonicParsing="false" text="Restaurant" />
+                                    <RadioButton fx:id="workShopButton" layoutX="20.0" layoutY="322.0" mnemonicParsing="false" text="Work Shop" />
+                                    <RadioButton fx:id="policlinicButton" layoutX="20.0" layoutY="339.0" mnemonicParsing="false" text="Policlinic" />
+                                    <RadioButton fx:id="butcherButton" layoutX="20.0" layoutY="356.0" mnemonicParsing="false" text="Butcher" />
+                                    <RadioButton fx:id="pharmacyButtonOffice" layoutX="20.0" layoutY="373.0" mnemonicParsing="false" text="Pharmacy" />
+                                    <RadioButton fx:id="cameraButton" layoutX="20.0" layoutY="390.0" mnemonicParsing="false" text="Camera" />
+                                    <RadioButton fx:id="alarmButtonOffice" layoutX="20.0" layoutY="407.0" mnemonicParsing="false" text="Alarm" />
+                                    <RadioButton fx:id="generatorButton" layoutX="20.0" layoutY="424.0" mnemonicParsing="false" text="Generator" />
+                                    <RadioButton fx:id="kitchenButton" layoutX="20.0" layoutY="441.0" mnemonicParsing="false" text="Kitchen" />
+                                    <RadioButton fx:id="wcButton" layoutX="20.0" layoutY="458.0" mnemonicParsing="false" text="WC" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="landPane" disable="true" expanded="false" layoutX="10.0" layoutY="210.0" text="Land">
+                     <content>
+                        <ScrollPane>
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ComboBox fx:id="zoningStatusBox" prefWidth="150.0" promptText="Zoning Status" />
+                                    <TextField fx:id="parcelField" layoutX="20.0" layoutY="20.0" promptText="Parcel" />
+                                    <ComboBox fx:id="deedStatusBox" prefWidth="150.0" promptText="Deed Status" />
+                                    <RadioButton fx:id="ElectricButton" mnemonicParsing="false" text="Electric" />
+                                    <RadioButton fx:id="waterButton" layoutX="20.0" layoutY="95.0" mnemonicParsing="false" text="Water" />
+                                    <RadioButton fx:id="naturalGAsButton" layoutX="20.0" layoutY="112.0" mnemonicParsing="false" text="Natural GAs" />
+                                    <RadioButton fx:id="pathOpenedButton" layoutX="20.0" layoutY="112.0" mnemonicParsing="false" text="Path Opened" />
+                                    <RadioButton fx:id="closeToMainRoadButton" layoutX="20.0" layoutY="146.0" mnemonicParsing="false" text="Close to Main Road" />
+                                    <RadioButton fx:id="closeToTransportationButton" layoutX="20.0" layoutY="163.0" mnemonicParsing="false" text="Close to Transportation" />
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <TitledPane fx:id="salePane" disable="true" expanded="false" text="Sale">
+                     <content>
+                        <VBox>
+                           <children>
+                              <TextField fx:id="priceField" promptText="Price" />
+                              <TextField fx:id="duesField" promptText="Dues" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="longTermPane" disable="true" expanded="false" layoutX="10.0" layoutY="10.0" text="Long Term Loan">
+                     <content>
+                        <VBox>
+                           <children>
+                              <TextField fx:id="monthlyPriceField" promptText="Monthly Price" />
+                              <TextField fx:id="depositField" promptText="Deposit" />
+                              <TextField fx:id="duesFieldLongTerm" promptText="Dues" />
+                              <TextField fx:id="minimumContractLengthField" promptText="Minimum Contract Length" />
+                              <TextField fx:id="maximumContractLengthField" promptText="Maximum Contract Length" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="shortTermPane" disable="true" expanded="false" layoutX="10.0" layoutY="36.0" text="Short Term Loan">
+                     <content>
+                        <VBox>
+                           <children>
+                              <TextField fx:id="dailyPriceField" layoutX="10.0" layoutY="60.0" promptText="Daily Price" />
+                              <TextField fx:id="depositFieldShortTerm" promptText="Deposit" />
+                              <TextField fx:id="minimumDayField" layoutX="10.0" layoutY="10.0" promptText="Minimum Day" />
+                              <TextField fx:id="maximumDayField" layoutX="10.0" layoutY="35.0" promptText="Maximum Day" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <Button fx:id="saveButton" disable="true" mnemonicParsing="false" onAction="#saveButtonClicked" text="Save">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Text fx:id="warningMessage" fill="BLUE" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

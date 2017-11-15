@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdPage">
+   <children>
+      <fx:include source="Template.fxml" />
+      <SplitPane dividerPositions="0.3, 0.6" layoutX="300.0" layoutY="200.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+         <items>
+            <VBox>
+               <children>
+                  <TitledPane text="Category">
+                     <content>
+                        <GridPane disable="true" prefWidth="216.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="houseButton" mnemonicParsing="false" text="House" />
+                              <RadioButton fx:id="saleButton" mnemonicParsing="false" text="Sale" GridPane.columnIndex="1" />
+                              <RadioButton fx:id="officeButton" mnemonicParsing="false" text="Office" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="longTermButton" mnemonicParsing="false" text="Long Term Loan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <RadioButton fx:id="landButton" mnemonicParsing="false" text="Land" GridPane.rowIndex="2" />
+                              <RadioButton fx:id="shortTermButton" mnemonicParsing="false" text="Short Term Loan" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane text="Details">
+                     <content>
+                        <VBox disable="true" spacing="5.0">
+                           <children>
+                              <GridPane prefHeight="186.0" prefWidth="196.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                  <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="10.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Square meter" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Description" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="106.13671875" GridPane.columnIndex="1" />
+                                    <Text fx:id="addressText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="106.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Text fx:id="squareMeterText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="106.13671875" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Text fx:id="descriptipnText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="109.13671875" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </GridPane>
+                              <RadioButton fx:id="exchangableButton" mnemonicParsing="false" text="Exchangable" />
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <Label fx:id="addFavouritesLabel" onMouseClicked="#addFavouritesLabelClicked" text="Add to your favourites">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icon-star.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <TitledPane text="Photos">
+                     <content>
+                        <VBox fx:id="photosVBox" alignment="CENTER" spacing="10.0" />
+                     </content>
+                  </TitledPane>
+                  <ImageView fx:id="mapImage" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin></ImageView>
+                  <TextArea fx:id="messageTextArea" prefHeight="101.0" prefWidth="292.0" promptText="Send message to seller">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Button fx:id="sendButton" mnemonicParsing="false" onAction="#sendButtonClicked" text="Send" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER">
+               <children>
+                  <TitledPane fx:id="housePane" collapsible="false" expanded="false" text="House">
+                     <content>
+                        <ScrollPane>
+                           <content>
+                              <VBox disable="true" spacing="2.0">
+                                 <children>
+                                    <GridPane hgap="5.0" vgap="5.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                          <RowConstraints vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Text fx:id="ageOfBuildingText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                                          <Text fx:id="floorNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Text fx:id="roomNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Text fx:id="numberOfFloorText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Text fx:id="frontText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Text fx:id="typeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age of the Building">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Floor Number" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Floor" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Front" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heating" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text fx:id="heatingText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <RadioButton fx:id="usedButton" mnemonicParsing="false" text="Used" />
+                                    <RadioButton fx:id="furnishedButton" layoutX="20.0" layoutY="170.0" mnemonicParsing="false" text="Furnished" />
+                                    <Text fill="BLUE" strokeType="OUTSIDE" strokeWidth="0.0" text="Exterior Features">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <RadioButton fx:id="elevatorButton" layoutX="20.0" layoutY="262.0" mnemonicParsing="false" text="Elevator" />
+                                    <RadioButton fx:id="securityButton" layoutX="20.0" layoutY="279.0" mnemonicParsing="false" text="Security" />
+                                    <RadioButton fx:id="carParkButton" layoutX="20.0" layoutY="296.0" mnemonicParsing="false" text="Car Park" />
+                                    <RadioButton fx:id="indoorGarageButton" layoutX="20.0" layoutY="238.0" mnemonicParsing="false" text="Indoor Garage" />
+                                    <RadioButton fx:id="waterBoosterButton" layoutX="20.0" layoutY="255.0" mnemonicParsing="false" text="Water Booster" />
+                                    <RadioButton fx:id="thermalIsolationButton" layoutX="20.0" layoutY="272.0" mnemonicParsing="false" text="Thermal Isolation" />
+                                    <RadioButton fx:id="soundIsolationButton" layoutX="20.0" layoutY="289.0" mnemonicParsing="false" text="Sound Isolation" />
+                                    <RadioButton fx:id="gardenButton" layoutX="20.0" layoutY="306.0" mnemonicParsing="false" text="Garden" />
+                                    <Text fill="BLUE" layoutX="20.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interior Features">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <RadioButton fx:id="paintedButton" layoutX="20.0" layoutY="323.0" mnemonicParsing="false" text="Painted" />
+                                    <RadioButton fx:id="laminatedButton" layoutX="20.0" layoutY="340.0" mnemonicParsing="false" text="Laminated" />
+                                    <RadioButton fx:id="airConditionerButton" layoutX="20.0" layoutY="357.0" mnemonicParsing="false" text="Air Conditioner" />
+                                    <RadioButton fx:id="alarmButton" layoutX="20.0" layoutY="374.0" mnemonicParsing="false" text="Alarm" />
+                                    <RadioButton fx:id="terraceButton" layoutX="20.0" layoutY="391.0" mnemonicParsing="false" text="Terrace" />
+                                    <RadioButton fx:id="windowBlindButton" layoutX="20.0" layoutY="408.0" mnemonicParsing="false" text="Window Blind" />
+                                    <RadioButton fx:id="parentBathroomButton" layoutX="20.0" layoutY="425.0" mnemonicParsing="false" text="Parent Bathroom" />
+                                    <RadioButton fx:id="smartHomeButton" layoutX="20.0" layoutY="442.0" mnemonicParsing="false" text="Smart Home" />
+                                    <RadioButton fx:id="steelDoorButton" layoutX="20.0" layoutY="459.0" mnemonicParsing="false" text="Steel Door" />
+                                    <RadioButton fx:id="waterHeaterButton" layoutX="20.0" layoutY="476.0" mnemonicParsing="false" text="Water Heater" />
+                                    <Text fill="BLUE" layoutX="20.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goods">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <RadioButton fx:id="movieSystemButton" layoutX="20.0" layoutY="493.0" mnemonicParsing="false" text="Movie System" />
+                                    <RadioButton fx:id="tvButton" layoutX="20.0" layoutY="510.0" mnemonicParsing="false" text="TV" />
+                                    <RadioButton fx:id="ovenButton" layoutX="20.0" layoutY="527.0" mnemonicParsing="false" text="Oven" />
+                                    <RadioButton fx:id="dishWasherButton" layoutX="20.0" layoutY="544.0" mnemonicParsing="false" text="Dish Washer" />
+                                    <RadioButton fx:id="wirelesButton" layoutX="20.0" layoutY="561.0" mnemonicParsing="false" text="Wireles" />
+                                    <RadioButton fx:id="barbequeButton" layoutX="20.0" layoutY="578.0" mnemonicParsing="false" text="Barbeque" />
+                                    <RadioButton fx:id="tableButton" layoutX="20.0" layoutY="595.0" mnemonicParsing="false" text="Table" />
+                                    <RadioButton fx:id="gamingToolsButton" layoutX="20.0" layoutY="612.0" mnemonicParsing="false" text="Gaming Tools" />
+                                    <RadioButton fx:id="kitchenToolsButton" layoutX="20.0" layoutY="629.0" mnemonicParsing="false" text="Kitchen Tools" />
+                                    <RadioButton fx:id="saunaButton" layoutX="20.0" layoutY="646.0" mnemonicParsing="false" text="Sauna" />
+                                    <RadioButton fx:id="gardenToolsButton" layoutX="20.0" layoutY="663.0" mnemonicParsing="false" text="Garden Tools" />
+                                    <Text fill="BLUE" layoutX="20.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nearlines">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <RadioButton fx:id="mosqueButton" layoutX="20.0" layoutY="680.0" mnemonicParsing="false" text="Mosque" />
+                                    <RadioButton fx:id="schoolButton" layoutX="20.0" layoutY="697.0" mnemonicParsing="false" text="School" />
+                                    <RadioButton fx:id="pharmacyButton" layoutX="20.0" layoutY="697.0" mnemonicParsing="false" text="Pharmacy" />
+                                    <RadioButton fx:id="supermarketButton" layoutX="20.0" layoutY="731.0" mnemonicParsing="false" text="Supermarket" />
+                                    <RadioButton fx:id="hospitalButton" layoutX="20.0" layoutY="731.0" mnemonicParsing="false" text="Hospital" />
+                                    <RadioButton fx:id="subwayButton" layoutX="20.0" layoutY="765.0" mnemonicParsing="false" text="Subway" />
+                                    <RadioButton fx:id="busStopButton" layoutX="20.0" layoutY="782.0" mnemonicParsing="false" text="Bus Stop" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" left="10.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="officePane" collapsible="false" expanded="false" text="Office">
+                     <content>
+                        <ScrollPane>
+                           <content>
+                              <VBox disable="true" spacing="2.0">
+                                 <children>
+                                    <GridPane hgap="5.0" vgap="5.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" />
+                                          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Text fx:id="classNumberText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                                          <Text fx:id="ageOfTheBuildingText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Text fx:id="floorNumberTextOffice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Text fx:id="roomNumberTextOffice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <Text fx:id="numberOfFloorTextOffice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <Text fx:id="heatingTextOffice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <Text fx:id="frontTextOffice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <Text fx:id="typeTextOffice" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Class Number">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Age of the Building" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Floor Number" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Floor" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Heating" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Front" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <RadioButton fx:id="usedButtonOffice" mnemonicParsing="false" text="Used" />
+                                    <RadioButton fx:id="furnishedButtonOffice" layoutX="20.0" layoutY="220.0" mnemonicParsing="false" text="Furnished" />
+                                    <Text fill="BLUE" strokeType="OUTSIDE" strokeWidth="0.0" text="Available for">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <RadioButton fx:id="automativeButton" layoutX="20.0" layoutY="237.0" mnemonicParsing="false" text="Automative" />
+                                    <RadioButton fx:id="cafeButton" layoutX="20.0" layoutY="254.0" mnemonicParsing="false" text="Cafe" />
+                                    <RadioButton fx:id="bakeryButton" layoutX="20.0" layoutY="271.0" mnemonicParsing="false" text="Bakery" />
+                                    <RadioButton fx:id="groceryButton" layoutX="20.0" layoutY="288.0" mnemonicParsing="false" text="Grocery" />
+                                    <RadioButton fx:id="restaurantButton" layoutX="20.0" layoutY="305.0" mnemonicParsing="false" text="Restaurant" />
+                                    <RadioButton fx:id="workShopButton" layoutX="20.0" layoutY="322.0" mnemonicParsing="false" text="Work Shop" />
+                                    <RadioButton fx:id="policlinicButton" layoutX="20.0" layoutY="339.0" mnemonicParsing="false" text="Policlinic" />
+                                    <RadioButton fx:id="butcherButton" layoutX="20.0" layoutY="356.0" mnemonicParsing="false" text="Butcher" />
+                                    <RadioButton fx:id="pharmacyButtonOffice" layoutX="20.0" layoutY="373.0" mnemonicParsing="false" text="Pharmacy" />
+                                    <Text fill="BLUE" layoutX="20.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Has">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <RadioButton fx:id="cameraButton" layoutX="20.0" layoutY="390.0" mnemonicParsing="false" text="Camera" />
+                                    <RadioButton fx:id="alarmButtonOffice" layoutX="20.0" layoutY="407.0" mnemonicParsing="false" text="Alarm" />
+                                    <RadioButton fx:id="generatorButton" layoutX="20.0" layoutY="424.0" mnemonicParsing="false" text="Generator" />
+                                    <RadioButton fx:id="kitchenButton" layoutX="20.0" layoutY="441.0" mnemonicParsing="false" text="Kitchen" />
+                                    <RadioButton fx:id="wcButton" layoutX="20.0" layoutY="458.0" mnemonicParsing="false" text="WC" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" left="10.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="landPane" collapsible="false" expanded="false" text="Land">
+                     <content>
+                        <ScrollPane>
+                           <content>
+                              <VBox disable="true" prefHeight="403.0" prefWidth="214.0" spacing="2.0">
+                                 <children>
+                                    <GridPane hgap="5.0" vgap="5.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Text fx:id="zoningStatusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                                          <Text fx:id="parcelText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Text fx:id="deedStatusText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zoning Status">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parcel" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deed Status" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="5.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <RadioButton fx:id="ElectricButton" mnemonicParsing="false" text="Electric" />
+                                    <RadioButton fx:id="waterButton" layoutX="20.0" layoutY="95.0" mnemonicParsing="false" text="Water" />
+                                    <RadioButton fx:id="naturalGAsButton" layoutX="20.0" layoutY="112.0" mnemonicParsing="false" text="Natural GAs" />
+                                    <RadioButton fx:id="pathOpenedButton" layoutX="20.0" layoutY="112.0" mnemonicParsing="false" text="Path Opened" />
+                                    <RadioButton fx:id="closeToMainRoadButton" layoutX="20.0" layoutY="146.0" mnemonicParsing="false" text="Close to Main Road" />
+                                    <RadioButton fx:id="closeToTransportationButton" layoutX="20.0" layoutY="163.0" mnemonicParsing="false" text="Close to Transportation" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="2.0" left="10.0" right="2.0" top="2.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="salePane" collapsible="false" expanded="false" text="Sale">
+                     <content>
+                        <VBox spacing="2.0">
+                           <children>
+                              <GridPane hgap="2.0" prefHeight="34.0" prefWidth="213.0" vgap="2.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text fx:id="priceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                                    <Text fx:id="duesText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dues" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                 </children>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="10.0" right="2.0" top="2.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="longTermPane" collapsible="false" expanded="false" layoutX="10.0" layoutY="10.0" text="Long Term Loan">
+                     <content>
+                        <VBox spacing="2.0">
+                           <children>
+                              <GridPane hgap="5.0" vgap="5.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text fx:id="monthlyPriceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                                    <Text fx:id="depositText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Text fx:id="duesTextLongTerm" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Text fx:id="minimumContractLengthText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Text fx:id="maximumContractLengthText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Price">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dues" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Contract Length" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Contract Length" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="10.0" right="2.0" top="2.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="shortTermPane" collapsible="false" expanded="false" layoutX="10.0" layoutY="36.0" text="Short Term Loan">
+                     <content>
+                        <VBox spacing="2.0">
+                           <children>
+                              <GridPane hgap="5.0" vgap="5.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Text fx:id="minimumDayText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" />
+                                    <Text fx:id="maximumDayText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Text fx:id="dailyPriceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Text fx:id="depositTextShortTerm" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Minimum Day">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Day" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Price" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="10.0" right="2.0" top="2.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
