@@ -1,4 +1,4 @@
-Real Estate Wizard® v1.0 Cyken Co.™ 
+Real Estate WizardÂ® v1.0 Cyken Co.â„¢ 
 ----------
 
 Program Features
@@ -74,7 +74,7 @@ About Us
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 We are Computer Science students at Bilkent University. This is the project assingment of
 the course CS-102 Algorithms and Programming. We founded Cyken Co. in 2016. 
-Kerem Ayöz:  		keremayoz@hotmail.com
-Emre Sülün:  		emresulun93@gmail.com
-Yasin Balcancı: 	ybalcanci@gmail.com
-Nurefşan Müsevitoğlu: 	musevitoglunurefsan@gmail.com
+Kerem AyÃ¶z:  		keremayoz@hotmail.com
+Emre SÃ¼lÃ¼n:  		emresulun93@gmail.com
+Yasin BalcancÄ±: 	ybalcanci@gmail.com
+NurefÃ¾an MÃ¼sevitoÄŸlu: 	musevitoglunurefsan@gmail.com
