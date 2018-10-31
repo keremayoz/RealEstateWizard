@@ -73,8 +73,8 @@ at the same time
 About Us
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 We are Computer Science students at Bilkent University. This is the project assingment of
-the course CS-102 Algorithms and Programming. We founded Cyken Co. in 2016. 
-Kerem Ayöz:  		keremayoz@hotmail.com
-Emre Sülün:  		emresulun93@gmail.com
-Yasin Balcancı: 	ybalcanci@gmail.com
-Nurefþan Müsevitoğlu: 	musevitoglunurefsan@gmail.com
+the course CS-102 Algorithms and Programming. We founded Cyken Co. in 2016.</br>
+Kerem Ayöz:  		keremayoz@hotmail.com</br>
+Emre Sülün:  		emresulun93@gmail.com</br>
+Yasin Balcancı: 	ybalcanci@gmail.com</br>
+Nurefşan Müsevitoğlu: 	musevitoglunurefsan@gmail.com
